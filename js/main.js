@@ -64,7 +64,7 @@ function showWinner(winner, computerChoice) {
     // Show modal result
     result.innerHTML = `
     <h1 class="modal__text--win">You win</h1>
-    <i class="choice far fa-hand-${computerChoice} fa-10x"></i>
+    <i class="far fa-hand-${computerChoice} fa-10x"></i>
     <p>Computer chose <strong>${computerChoice}</strong></p>
     `;
   } else if(winner === 'computer') {
@@ -73,13 +73,13 @@ function showWinner(winner, computerChoice) {
     // Show modal result
     result.innerHTML = `
     <h1 class="modal__text--lose">You lose</h1>
-    <i class="choice far fa-hand-${computerChoice} fa-10x"></i>
+    <i class="far fa-hand-${computerChoice} fa-10x"></i>
     <p>Computer chose <strong>${computerChoice}</strong></p>
     `;
   } else {
     result.innerHTML = `
     <h1>It's a draw</h1>
-    <i class="choice far fa-hand-${computerChoice} fa-10x"></i>
+    <i class="far fa-hand-${computerChoice} fa-10x"></i>
     <p>Computer chose <strong>${computerChoice}</strong></p>
     `;
   }
