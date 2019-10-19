@@ -85,7 +85,7 @@ function showWinner(winner, computerChoice) {
   }
   //Show score 
   score.innerHTML = `
-  <p>Player: ${scoreboard.player}</p>
+  <p>Mateusz Veigar: ${scoreboard.player}</p>
   <p>Computer: ${scoreboard.computer}</p>
   `;
 
