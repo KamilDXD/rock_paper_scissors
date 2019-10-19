@@ -1,3 +1,8 @@
+$modalDuration: 1s;
+$lightColor: rgb(238, 238, 238);
+$loseColor: rgb(145, 0, 0);
+$winColor: rgb(23, 138, 0);
+
 .modal {
   /* display: none; */
   position: fixed;
@@ -11,18 +16,15 @@
 }
 
 .modal__content {
-  background: #eeeeee;
+  background: $lightColor;
   text-align: center;
   margin: 10% auto;
   width: 350px;
   border-radius: 10px;
   padding: 3rem;
-  -webkit-animation-name: modalopen;
-          animation-name: modalopen;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.233);
-          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.233);
+  animation-name: modalopen;
+  animation-duration: $modalDuration;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.233);
 }
 
 .modal__text {
@@ -30,25 +32,16 @@
 }
 
 .modal__text--win {
-  color: #178a00;
+  color: $winColor;
 }
 
 .modal__text--lose {
-  color: #910000;
+  color: $loseColor;
 }
 
 .modal__content p {
   font-size: 1.2rem;
-  margin-top: 1rem;
-}
-
-@-webkit-keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-  to {
-    opactiy: 1;
-  }
+  margin-top: 1rem;;
 }
 
 @keyframes modalopen {
@@ -59,4 +52,3 @@
     opactiy: 1;
   }
 }
-/*# sourceMappingURL=modal.css.map */

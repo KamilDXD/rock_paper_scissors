@@ -1,0 +1,99 @@
+$playerColor: rgb(8, 0, 78);
+$darkColor: rgb(54, 54, 54);
+$lightColor: rgb(238, 238, 238);
+$lightColorHover: rgb(226, 226, 226);
+$loseColor: rgb(145, 0, 0);
+$winColor: rgb(23, 138, 0);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: rgb(253, 253, 253);
+  color: $darkColor;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.header h1 {
+  margin-bottom: 2rem;
+}
+
+.restart__btn {
+  display: none;
+  background: $lightColor;
+  color: $darkColor;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.restart__btn:hover {
+  background: $lightColorHover;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: $lightColor;
+}
+
+.score p:first-child {
+  background: $playerColor;
+}
+
+.score p:last-child {
+  background: $darkColor;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.choice {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.choice:hover {
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;   
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+  }
+
+  @media(max-width: 700px) {
+    .choice {
+      font-size: 6rem;
+    }
+  }
+
+  @media(max-width: 500px) {
+    .choice {
+      font-size: 5rem;
+    }
+  }
