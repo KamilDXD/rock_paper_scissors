@@ -109,3 +109,9 @@ body {
       font-size: 5rem;
     }
   }
+
+  @media(max-width: 450px) {
+    .choice {
+      font-size: 3.5rem;
+    }
+  }
